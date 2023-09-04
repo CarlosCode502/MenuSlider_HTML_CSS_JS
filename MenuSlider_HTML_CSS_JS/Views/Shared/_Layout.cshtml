@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-au">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,22 +39,24 @@
         </nav>
     </header> *@
     <header>
-        <div class="hero" id="0">
+        <div class="hero" id="Inicio">
             <h1>MENÚ SLIDER</h1>
             <p>HTML • CSS • Javascript</p>
         </div>
     </header>
 
     @* Menú de navegación *@
-    <nav class="nav_menu" id="menu">
-        <a href="#0">Inicio</a>
-        <a href="#1">Perfil</a>
-        <a href="#2">Ver Proyectos</a>
-        <a href="#3">Contacto</a>
+    @* TENIA PROBLEMAS AL MANTENER LA BARRA DE NAVEGACIÓN DEBIDO A QUE HABIA ESTABLECIDO EL NAV EN EL ENCABEZADO *@
+    <nav class="nav_menu" id="nav_menu_id">
+        <a href="#Inicio">Inicio</a>
+        <a href="#Perfil">Perfil</a>
+        <a href="#Habilidades">Habilidades</a>
+        <a href="#Proyectos recientes">Proyectos recientes</a>
+        <a href="#Contacto">Contacto</a>
         @* Opción extra para ir al footer desde el nav *@
         @*           <a href="#4">Fin</a> *@
         @* Span vacio que usaremos para indicar que opción del menú que se selecciono *@
-        <span class="indicador" id="indicador"></span>
+        <span class="indicador" id="indicador_id"></span>
     </nav>
 
     @*     <div class="secciones">
@@ -69,7 +71,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" id="4">
+    <footer class="border-top footer text-muted" id="Contacto">
         <div class="container">
             &copy; 2023 - Carlos Herrera.
         </div>

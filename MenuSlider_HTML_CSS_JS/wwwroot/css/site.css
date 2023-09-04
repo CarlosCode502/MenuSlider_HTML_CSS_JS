@@ -33,7 +33,7 @@ body {
     background: #f2f2f2;
     font-family: 'Roboto', sans-serif;
     /*Espacio entre el contenido y el footer*/
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 a {
@@ -64,6 +64,7 @@ a {
         font-size: 30px;
         text-transform: uppercase;
         color: #113CFC;
+        text-shadow: 0 0 6px;
     }
 
 
@@ -112,13 +113,40 @@ a {
         font-weight: 500;
     }
 
+        /*Efecto sombreado(hover) al pasar el cursor en el nav*/
+        .nav_menu a:hover {
+            background: #6782fa;
+            font-size: 20px;
+        }
+
+
+    .nav_menu .indicador {
+        /*ancho se cambio el valor ya que se debe calcular el tamaño del boton por
+            medio de JS aqui en css a traves de los media querys.
+        */
+        width: 0px;
+        /*altura*/
+        height: 7px;
+        /*color*/
+        background: #113cfc;
+        /*Posicionamiento*/
+        position: absolute;
+        /*Posicionar el la parte de abajo del nav*/
+        bottom: 0;
+        /*Va a tener trnsisciones de tiempo para todas las propiedades*/
+        /*Va a tener una animación*/
+        transition: .3s ease-out all;
+        /*para demostrar mientras va aumentando va ir cambiando*/
+        /*el indicador va a ir de izquierda a derecha va a aparecer por eso es negativo*/
+        transform: translate(-500px);
+    }
 
 .seccion {
     min-height: 100vh;
-    max-width: 800px;
-    width: 90%;
+    max-width: 1200px;
+    width: 85%;
     margin: auto;
-    padding-top: 120px;
+    padding-top: 85px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +157,7 @@ a {
         background: #fff;
         height: 90%;
         padding: 40px;
-        border-radius: 5px;
+        border-radius: 8px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
@@ -140,20 +168,23 @@ a {
 
     .seccion p {
         line-height: 38px;
-        margin-bottom: 40px;
+        /*margin-bottom: 20px;*/
         color: #494949;
         font-size: 20px;
     }
 
+    /*ES IMPORTANTE MANEJAR LAS IMAGENES EN TIPO DE FORMA (px) ya que en (%) tiende a dejar espacios*/
     .seccion img {
-        width: 100%;
-        vertical-align: top;
+        width: 1000px;
+        height: 500px;
+        vertical-align: central;
         margin-bottom: 20px;
     }
 
 
 .border-top {
-    border-top: 2px solid #e5e5e5;
+    border-top: 3px solid #e5e5e5;
+    text-shadow: 0 1px;
 }
 
 .footer {
@@ -165,8 +196,20 @@ a {
     text-align: center;
 }
 
+/*#region Media Querys */
+/*Ayudan a mostrar las animaciones según el tamaño de la pantalla si es menor o mayor*/
+
 @media screen and (max-width: 800px) {
+    .nav_menu a{
+        font-size: 14px;
+        padding: 5px;
+    }
 }
 
 @media screen and (max-width: 450px) {
+    .nav_menu a{
+        font-size: 12px;
+    }
 }
+
+/*#endregion */
