@@ -4,16 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MenuSlider_HTML_CSS_JS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
-    <link rel="stylesheet" href="~/MenuSlider_HTML_CSS_JS.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/MenuSlider_HTML_CSS_JS.styles.css" asp-append-version="true" /> *@
     @* 1 Agregamos el estilo ".css" *@
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="false" />
 
 </head>
-<body>
-    <header>
-    @* <partial name="_MenuSlider_PV.cshtml" /> *@
+<body>    
     @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -35,17 +38,29 @@
             </div>
         </nav>
     </header> *@
-
-    <div class="hero" id="hero">
-        <h1>MENÚ SLIDER</h1>
-        <p>HTML • CSS • Javascript</p>
-    </div>
+    <header>
+        <div class="hero" id="0">
+            <h1>MENÚ SLIDER</h1>
+            <p>HTML • CSS • Javascript</p>
+        </div>
     </header>
 
-@*     <div class="secciones">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    @* Menú de navegación *@
+    <nav class="nav_menu" id="menu">
+        <a href="#0">Inicio</a>
+        <a href="#1">Perfil</a>
+        <a href="#2">Ver Proyectos</a>
+        <a href="#3">Contacto</a>
+        @* Opción extra para ir al footer desde el nav *@
+        @*           <a href="#4">Fin</a> *@
+        @* Span vacio que usaremos para indicar que opción del menú que se selecciono *@
+        <span class="indicador" id="indicador"></span>
+    </nav>
+
+    @*     <div class="secciones">
+    <main role="main" class="pb-3">
+    @RenderBody()
+    </main>
     </div> *@
 
     <div class="container">
@@ -53,10 +68,10 @@
             @RenderBody()
         </main>
     </div>
-   
-    <footer class="border-top footer text-muted">
+
+    <footer class="border-top footer text-muted" id="4">
         <div class="container">
-            &copy; 2023 - MenuSlider_HTML_CSS_JS - <a asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
+            &copy; 2023 - Carlos Herrera.
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -64,7 +79,7 @@
     @* 2 Agregamos el scrip en la parte final de la vista *@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @* @* 2 Agregamos el scrip en la parte final de la vista 
+    @* @* 2 Agregamos el scrip en la parte final de la vista
     <script src="~/js/app.js" asp-append-version="true"></script> *@
 
     @await RenderSectionAsync("Scripts", required: false)

@@ -10,14 +10,16 @@
 
 /*Para que el contenido se mantenga sobrepuesto del footer*/
 html {
-  position: relative;
-  min-height: 100%;
+    /*Propiedad para mostrar una animación al momento de ir desde un enlace hacia una seccion*/
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100%;
 }
 
 /*Espacio entre el contenido y el footer*/
-body {
+/*body {
   margin-bottom: 80px;
-}
+}*/
 
 
 
@@ -30,6 +32,8 @@ body {
 body {
     background: #f2f2f2;
     font-family: 'Roboto', sans-serif;
+    /*Espacio entre el contenido y el footer*/
+    margin-bottom: 80px;
 }
 
 a {
@@ -41,14 +45,20 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /*Para mostrar mi pantalla de inicio en toda la pantalla del navegador
+        que ocupe el 100% (v*h viewpor hight alto del dispositivo)
+        SE CAMBIA PERO SE UTILIZARA UNA FUNCION calc(100vh - 80 px);
+    */
+    height: calc(100vh - 80px);
 }
 
-/*Titulo*/
+    /*Titulo*/
     .hero h1 {
+        margin-top: 2rem;
         margin-left: 1rem;
         font-size: 80px;
     }
-/*Subtitulo*/
+    /*Subtitulo*/
     .hero p {
         margin-left: 1rem;
         font-size: 30px;
@@ -57,7 +67,50 @@ a {
     }
 
 
-
+/*Menú de navegación
+    VERIFICAR EN CASO DE NECESITAR OTRO MENÚ
+*/
+.nav_menu {
+    /*color de fondo*/
+    background: #fff;
+    /*altura*/
+    height: 80px;
+    /*sombra*/
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    /*Para que los elementos se pongan uno al lado de otro con(flexbox)*/
+    display: flex;
+    /*CONFIGURAR EL MENÚ PEGAJOSO (PARA QUE SE MANTENGA)*/
+    /*Con la propiedad sticky*/
+    position: sticky;
+    /*indicamos en donde se quedara pegado*/
+    top: 0; /*Coordenada 0*/
+    /*Para ocultar el indicador en caso de que quede fuera y no se tenga seleccionado (dependiendo el disp será el error)*/
+    overflow: hidden;
+}
+    /*Para que todos los enlaces "a" se muestren espaciados */
+    .nav_menu a {
+        /*CON FLEXBOX*/
+        /*Para que todos tengan el mismo tamaño*/
+        flex: 1;
+        /*alto*/
+        height: 100%;
+        /*Para que el texto se ponga en mayúscula*/
+        text-transform: uppercase;
+        /*Para indicarle que se va a usar flexbox*/
+        display: flex;
+        /*alinear el texto de forma vertical*/
+        align-items: center;
+        /*alinear el texto de forma vertical en los contenedores*/
+        justify-content: center;
+        /*Todo el contenido centrado al ocupar más de 2 lineas*/
+        text-align: center;
+        /*Colr*/
+        color: #000;
+        /*Transición de tiempo para todas las propiedades*/
+        transition: .2s ease-in-out all;
+        /*Texto con negritas fuerte*/
+        font-weight: 500;
+    }
 
 
 .seccion {
@@ -99,9 +152,17 @@ a {
     }
 
 
+.border-top {
+    border-top: 2px solid #e5e5e5;
+}
+
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     white-space: nowrap;
     line-height: 60px;
+    text-align: center;
 }
 
 @media screen and (max-width: 800px) {
