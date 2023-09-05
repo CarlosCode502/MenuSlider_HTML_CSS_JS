@@ -209,18 +209,19 @@ a {
 /*Ayudan a mostrar las animaciones según el tamaño de la pantalla si es menor o mayor*/
 @media screen and (max-width: 800px) {
     .nav_menu a {
-        font-size: 14px;
+        font-size: 12px;
         padding: 5px;
     }
 
     .seccion p {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 300px) {
     .nav_menu a {
         font-size: 8px;
+        padding: 1px;
     }
 
     .seccion p {
