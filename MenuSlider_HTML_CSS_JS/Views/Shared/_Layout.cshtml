@@ -53,6 +53,7 @@
         <a href="#Habilidades">Habilidades</a>
         <a href="#Proyectos recientes">Proyectos recientes</a>
         <a href="#Contacto">Contacto</a>
+        @* <button type="button" class="btn btn-primary">Contactar</button> *@
         @* Opción extra para ir al footer desde el nav *@
         @*           <a href="#4">Fin</a> *@
         @* Span vacio que usaremos para indicar que opción del menú que se selecciono *@
@@ -71,14 +72,19 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" id="Contacto">
-        <div class="container">
-            &copy; 2023 - Carlos Herrera.
-        </div>
-    </footer>
+    <div class="foo">
+        <footer class="border-top footer text-muted" id="Contacto">
+            <div class="container">
+                &copy; 2023 - Carlos Herrera.
+            </div>
+        </footer>
+    </div>
+    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     @* 2 Agregamos el scrip en la parte final de la vista *@
+    @* Relacionar/Importar el script JS *@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @* @* 2 Agregamos el scrip en la parte final de la vista

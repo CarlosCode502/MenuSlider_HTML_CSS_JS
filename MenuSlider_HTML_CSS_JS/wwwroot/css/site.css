@@ -116,7 +116,7 @@ a {
         /*Efecto sombreado(hover) al pasar el cursor en el nav*/
         .nav_menu a:hover {
             background: #6782fa;
-            font-size: 20px;
+            /*font-size: 20px;*/
         }
 
 
@@ -138,7 +138,7 @@ a {
         transition: .3s ease-out all;
         /*para demostrar mientras va aumentando va ir cambiando*/
         /*el indicador va a ir de izquierda a derecha va a aparecer por eso es negativo*/
-        transform: translate(-500px);
+        /*transform: translate(-500px);*/
     }
 
 .seccion {
@@ -146,13 +146,13 @@ a {
     max-width: 1200px;
     width: 85%;
     margin: auto;
-    padding-top: 85px;
+    padding-top: 92px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
+    
     .seccion .card {
         background: #fff;
         height: 90%;
@@ -168,16 +168,18 @@ a {
 
     .seccion p {
         line-height: 38px;
-        /*margin-bottom: 20px;*/
+        margin-bottom: 20px;
         color: #494949;
         font-size: 20px;
     }
 
     /*ES IMPORTANTE MANEJAR LAS IMAGENES EN TIPO DE FORMA (px) ya que en (%) tiende a dejar espacios*/
     .seccion img {
-        width: 1000px;
-        height: 500px;
-        vertical-align: central;
+        /*width: 1000px;
+        height: 500px;*/
+        /*vertical-align: central;*/
+        width: 100%;
+        vertical-align: top;
         margin-bottom: 20px;
     }
 
@@ -188,27 +190,41 @@ a {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    /*position: absolute;*/
+    padding-top: 5rem;
+    /*bottom: 0;*/
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
     text-align: center;
+    
 }
+
+/*.foo{
+    padding-bottom: 60%;
+}*/
+
 
 /*#region Media Querys */
 /*Ayudan a mostrar las animaciones según el tamaño de la pantalla si es menor o mayor*/
-
 @media screen and (max-width: 800px) {
-    .nav_menu a{
+    .nav_menu a {
         font-size: 14px;
         padding: 5px;
     }
+
+    .seccion p {
+        font-size: 16px;
+    }
 }
 
-@media screen and (max-width: 450px) {
-    .nav_menu a{
-        font-size: 12px;
+@media screen and (max-width: 350px) {
+    .nav_menu a {
+        font-size: 8px;
+    }
+
+    .seccion p {
+        font-size: 10px;
     }
 }
 
