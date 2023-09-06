@@ -87,6 +87,9 @@ secciones.forEach(seccion => observer.observe(seccion));
 
 //Evento para detectar cuando la pantalla cambie de tamaño
 let onResize = () => {
+
+    /*indexSeccionAcctiva = [...secciones].indexOf(entrada.target);//Operador esspred lo convierte en arreglo para ob el indice*/
+
     /*console.log('pantalla cambio a' + onResize);*/
     //Calcula el nuevo tamaño que tendra nuestro indicador
     tamanioIndicador = menu.querySelector('a').offsetWidth;

@@ -12,8 +12,8 @@
 html {
     /*Propiedad para mostrar una animación al momento de ir desde un enlace hacia una seccion*/
     scroll-behavior: smooth;
-    position: relative;
-    min-height: 100%;
+    /*position: absolute;*/
+    /*min-height: 100%;*/
 }
 
 /*Espacio entre el contenido y el footer*/
@@ -55,12 +55,12 @@ a {
     /*Titulo*/
     .hero h1 {
         margin-top: 2rem;
-        margin-left: 1rem;
+        /*margin-left: 2rem;*/
         font-size: 80px;
     }
     /*Subtitulo*/
     .hero p {
-        margin-left: 1rem;
+        /*margin-left: 0;*/
         font-size: 30px;
         text-transform: uppercase;
         color: #113CFC;
@@ -146,13 +146,13 @@ a {
     max-width: 1200px;
     width: 85%;
     margin: auto;
-    padding-top: 92px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-    
+
     .seccion .card {
         background: #fff;
         height: 90%;
@@ -183,42 +183,31 @@ a {
         margin-bottom: 20px;
     }
 
-
-.border-top {
-    border-top: 3px solid #e5e5e5;
-    text-shadow: 0 1px;
-}
-
-.footer {
-    /*position: absolute;*/
-    padding-top: 5rem;
-    /*bottom: 0;*/
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px;
-    text-align: center;
-    
-}
-
-/*.foo{
-    padding-bottom: 60%;
-}*/
-
-
 /*#region Media Querys */
 /*Ayudan a mostrar las animaciones según el tamaño de la pantalla si es menor o mayor*/
-@media screen and (max-width: 800px) {
+/*SE REDUJO EL DE 7 A 640 (AHORA SI LO ADMITE EL S9)*/
+@media screen and (max-width: 640px) {
     .nav_menu a {
         font-size: 12px;
-        padding: 5px;
+        /*padding: 5px;*/
     }
 
-    .seccion p {
-        font-size: 14px;
+    .seccion {
+        padding-top: -50px;
     }
+
+        .seccion h1 {
+            font-size: 32px;
+            /*margin-bottom: 20px;*/
+        }
+
+        .seccion p {
+            line-height: 28px;
+            font-size: 14px;
+        }
 }
 
-@media screen and (max-width: 300px) {
+/*@media screen and (max-width: 300px) {
     .nav_menu a {
         font-size: 8px;
         padding: 1px;
@@ -227,6 +216,89 @@ a {
     .seccion p {
         font-size: 10px;
     }
-}
+}*/
 
 /*#endregion */
+
+
+.footer {
+    /*position: absolute;*/
+    padding-top: 5rem;
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*white-space: nowrap;*/
+    line-height: 30px;
+    text-align: center;
+}
+
+    .footer .text-copy {
+        text-shadow: 0 1px;
+    }
+
+    .footer .texto-gris {
+        color: grey;
+    }
+
+    .footer .img-div {
+        /* altura*/
+        height: 70px;
+    }
+
+.img-45 {
+    /*display: flex;*/
+    /*    padding: 0px 0px 0px 0px;*/
+    margin: 30px 30px 30px 30px;
+    /*margin-right: 50px;*/
+    display: inline-block;
+    /*display: contents;*/
+    /*width: 200px;*/
+    text-align: center;
+    /*color: #000;   */
+    /*width ="64" height="64"*/
+    width: 64px;
+    height: 64px;
+    /*margin-right: 50px;*/
+    /*fill: currentColor;*/
+    /*position: relative;*/
+}
+
+    .img-45 svg {
+        /*CON FLEXBOX*/
+        /*Para que todos tengan el mismo tamaño*/
+        /*flex: 1;*/
+        /*alto*/
+        /*height: 100%;*/
+        /*Para que el texto se ponga en mayúscula*/
+        /*text-transform: uppercase;*/
+        /*Para indicarle que se va a usar flexbox*/
+        display: flex;
+        /*alinear el texto de forma vertical*/
+        /*align-items: center;*/
+        /*alinear el texto de forma vertical en los contenedores*/
+        justify-content: center;
+        /*Todo el contenido centrado al ocupar más de 2 lineas*/
+        /*text-align: center;*/
+        /*Colr*/
+        /*color: #000;*/
+        /*Transición de tiempo para todas las propiedades*/
+        transition: .2s ease-in-out all;
+        /*Texto con negritas fuerte*/
+        /*font-weight: 500;*/
+    }
+
+        .img-45 svg:hover {
+            /*flex: 1;*/
+            height: 100%;
+            width: 75px;
+            height: 75px;
+            fill: rgb(17, 60, 252);
+            /*transition: .2s ease-in-out all;*/
+        }
+
+/*    .img-45 .i {
+        width: 64px;
+        height: 64px;
+    }
+*/
+/*#endregion */
+
