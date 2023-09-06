@@ -1,4 +1,5 @@
-﻿* {
+/*ESTE CÓDIGO SE PASO A sitio.css*/
+/*﻿* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -75,7 +76,7 @@ a {
 
 
 @media screen and (max-width: 800px) {
-}
+}*/
 
 @media screen and (max-width: 450px) {
 }
